@@ -45,13 +45,18 @@ display: flex;
 justify-content: center;
 top: 2px;
 align-items: center; 
+@media (max-width: 768px) {
+  height: auto;
+}
 
 `
 const ItemsCont = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px; /* Adjust the gap as needed */
-  max-width: 1060px;
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
 `
 const Card = styled.div`
